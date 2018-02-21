@@ -1,0 +1,28 @@
+$main_color: #c0c0c0;
+
+
+#main .media{
+  color: black;
+  &:hover grow { border: 1px solid $main_color; }
+}
+
+
+@mixin inline-block($align, $margin : 10px) { // Si aucune valeur n'est précisée alors $margin vaut 10px
+    display: inline-block;
+    vertical-align: $align;
+    margin-left: $margin;
+}
+
+// Appel de la mixin
+.bloc {
+    @include inline-block(middle);
+}
+
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}

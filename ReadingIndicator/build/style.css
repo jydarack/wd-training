@@ -1,0 +1,36 @@
+html, body {
+  margin: 0; }
+
+header {
+  position: fixed;
+  top: 0;
+  height: 125px;
+  width: 100%;
+  background: white; }
+
+main {
+  margin-top: 128px; }
+
+@supports (height: 100vh) {
+  body {
+    background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
+    background-size: 100% calc(100% - 100vh + 129px);
+    background-repeat: no-repeat; }
+
+  body:before {
+    content: '';
+    position: fixed;
+    top: 128px;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: white; } }
+body {
+  font-family: "Open Sans";
+  font-size: 1.25rem; }
+
+main, header {
+  padding: 10px 10%;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBVSxVQUFRLEVBQUE7O0FBQ2xCO0VBQ0ksZ0JBQWU7RUFDZixPQUFLO0VBQ0wsY0FBYTtFQUNiLFlBQVc7RUFDWCxrQkFBaUIsRUFBQTs7QUFHckI7RUFDSSxrQkFBaUIsRUFBQTs7QUFHckI7RUFDSTtJQUNJLGlFQUFnRTtJQUNoRSxpREFBZ0Q7SUFDaEQsNkJBQTRCLEVBQUE7O0VBR2hDO0lBQ0ksWUFBVTtJQUNWLGdCQUFlO0lBQ2YsV0FBVTtJQUNWLFVBQVM7SUFDVCxZQUFXO0lBQ1gsWUFBVztJQUNYLGtCQUFpQixFQUFBLEVBQUE7QUFNekI7RUFDUSx5QkFBd0I7RUFDeEIsbUJBQWtCLEVBQUE7O0FBRTFCO0VBQ0ksa0JBQWlCO0VBQ2pCLHVCQUFzQixFQUFBIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */

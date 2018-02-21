@@ -1,0 +1,18 @@
+#main .media {
+  color: black; }
+  #main .media:hover grow {
+    border: 1px solid #c0c0c0; }
+
+.bloc {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; }
+
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd; }
+
+.seriousError {
+  border-width: 3px; }
+
+/*# sourceMappingURL=test.css.map */
