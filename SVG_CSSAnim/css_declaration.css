@@ -1,0 +1,37 @@
+.slider-control li:hover #sliderCenterDot,
+.slider-control li:hover #sliderCenterCircle,
+.slider-control li:hover #sliderText{
+  animation: slider linear 0.5s normal 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+.slider-control li:not(.sliderActive):hover #sliderRuler {
+  animation: rulerGrow linear 1s normal 1;
+}
+.slider-control li:not(.sliderActive) #sliderRuler{
+  /* animation: slider linear 0.5s reverse 1; */
+  stroke-dasharray: 87 0;
+  animation-delay: 500;
+}
+
+li:not(:hover) #sliderCenterDot,
+li:not(:hover) #sliderCenterCircle,
+li:not(:hover) #sliderText {
+  opacity: 0;
+}
+
+li.sliderActive:not(:hover) #sliderCenterDot,
+li.sliderActive:not(:hover) #sliderCenterCircle,
+li.sliderActive:not(:hover) #sliderRuler,
+li.sliderActive:not(:hover) #sliderText {
+  opacity: 1;
+  visibility: visible;
+  animation: unset;
+}
+
+li:not(:hover) #sliderStartDot {
+  animation: unset;
+  opacity: 1 !important;
+}
+@keyframes slider {
+  to {opacity: 1;}
+}

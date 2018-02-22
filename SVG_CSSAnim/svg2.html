@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #sliderRuler{
+      /* animation: slider linear 0.5s reverse 1; */
+      stroke-dasharray: 87 0;
+      animation-delay: 1s;
+    }
+    svg:hover #sliderRuler{
+
+      animation: slider linear 0.5s normal 1;
+    }
+    @keyframes slider {
+      0% {
+        stroke-dasharray:0 87;
+      }
+      100% {stroke-dasharray:87 87;}
+    }
+  </style>
+</head>
+<body>
+  <svg width="100" height="40" style="margin-left: 15px;">
+    <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+    <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+    <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+    <!-- <line x1="87" y1="27" x2="0" y2="27" style="stroke:rgb(255,102,0);stroke-width:1" id="sliderRuler"/> -->
+    <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="1" fill="none" stroke-dasharray="0, 87" id="sliderRuler"/>
+    <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+  </svg>
+</body>
+</html>

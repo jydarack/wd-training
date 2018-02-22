@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bouncing Ball with Anime JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script type="text/javascript">
+
+    </script>
+    <style>
+    * {
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: black;
+}
+.wrapper {
+height: 80vh;
+width: 100%;
+margin: 0;
+padding: 0;
+position: relative;
+overflow: hidden;
+border: 1px solid blue;
+background-color: lightblue;
+color: #444;
+}
+
+.ball {
+height: 200px;
+width: 200px;
+position: absolute;
+top: 20px;
+bottom: 0;
+left: calc(50% - 100px);
+background-color: darkblue;
+border-radius: 50%;
+}
+    </style>
+</head>
+
+<body>
+
+  <section class="wrapper">
+	  <div class="ball"></div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script>
+  var bouncingBall = anime({
+targets: '.ball',
+translateY: '50vh',
+duration: 300,
+loop: true,
+direction: 'alternate',
+easing: 'easeInCubic',
+scaleX: {
+  value: 1.05,
+  duration: 150,
+  delay: 268
+}
+});
+  </script>
+</body>
+
+</html>

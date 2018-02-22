@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style media="screen">
+    .circle {position:absolute; top:50px; left:350px;}
+    .circle li {position:absolute; top:-300px; left:-300px; opacity: 0;}
+  </style>
+  <script>
+// function inMotion(){
+//       // PageChange["section1"].inMotion(false);
+//       TweenMax.delayedCall(0.5, CircleMotion.inMotion);
+//       TweenMax.delayedCall(2, function(){
+//           GlobalData.isMotionPlaying = false;
+//           CircleMotion.loopStart();
+//       });
+//       CustomTw.to($(".bg_group>li:eq(0)"), 0, {scale:1});
+//       CustomTw.to($(".bg_group>li:eq(0)"), 1, {scale:1.1, alpha:1});
+//
+//       CustomTw.to($("#intro_dimmed"), 1, {alpha:0});
+//       TweenMax.delayedCall(1, function(){ $("#intro_dimmed").hide(); })
+//   }
+//   inMotion();
+
+function initCircles(element){
+  var max_radius = 20;
+  var radius_variation = 0.6;
+
+  var random_angle = Math.random() * 2 * Math.PI;
+  var random_radius = Math.random() * max_radius * radius_variation + (1-radius_variation) * max_radius;
+  var trX = random_radius * Math.cos(random_angle);
+  var trY = random_radius * Math.sin(random_angle);
+
+  console.log("X: " + trX + ", Y: " + trY);
+
+  var circles = $(".circle li");
+  console.log(circles);
+  // for(let circle in circle_hash){
+  //   console.log(circle);
+  // };
+
+}
+
+function getCenter(element){
+  var center = {x: 0, y:0};
+  //console.log(element.length);
+  //jQuery !
+  var offset = element.offset();
+  var width = element.width();
+  var height = element.height();
+
+  center.x = offset.left + width / 2;
+  center.y = offset.top + height / 2;
+  return center;
+}
+
+function delayCircle(){
+  // each circle has its own speed and delay
+  var max_speed = 60;
+}
+
+function merryGoRound(element){
+  var center = getCenter(element);
+  initCircle();
+  delayCircle();
+  console.log(center);
+}
+
+merryGoRound($("ul.circle li"));
+
+</script>
+</head>
+<body>
+  <ul class="circle" style="top:343px !important;left:700px !important">
+
+         <li id="circle1"><img src="http://www.hanwhacorp.co.kr/_resource/main/images/section1/lines1.png" alt=""></li>
+
+         <li id="circle1"><img src="http://www.hanwhacorp.co.kr/_resource/main/images/section1/lines2.png" alt=""></li>
+
+         <li id="circle1"><img src="http://www.hanwhacorp.co.kr/_resource/main/images/section1/lines3.png" alt=""></li>
+
+         <li id="circle1"><img src="http://www.hanwhacorp.co.kr/_resource/main/images/section1/lines4.png" alt=""></li>
+
+     </ul>
+
+</body>
+</html>

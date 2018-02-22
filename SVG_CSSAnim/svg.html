@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/animations.css">
+<title>Document</title>
+<style media="screen">
+  body {
+    background-color: #888;
+  }
+
+  /* .slider-control #sliderRuler{
+    /* animation: slider linear 0.5s reverse 1; */
+    stroke-dasharray: 87 0;
+    animation-delay: 1s;
+  }
+  .slider-control  svg:hover #sliderRuler{
+    animation: slider linear 0.5s normal 1;
+  }
+  @keyframes slider {
+    0% {
+      stroke-dasharray:0 87;
+    }
+    100% {stroke-dasharray:87 87;}
+  } */
+</style>
+</head>
+<body>
+  <div id="aboutSelector" style="text-align:center">
+    <h2 id="title"><img src="../img/title-about-japan.png" alt="About Hanwha QCELLS Japan"></h2>
+    <div class="slider-control">
+      <ul>
+        <li id="controller-1" onClick="loadSlider(this); return false;" class="sliderActive">
+          <svg width="100" height="40">
+            <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+            <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+            <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+            <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+            <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+          </svg>
+        </li>
+        <li id="controller-2" onClick="loadSlider(this); return false;"><svg width="100" height="40">
+          <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+          <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+          <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+          <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+          <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+        </svg></li>
+        <li id="controller-3" onClick="loadSlider(this); return false;"><svg width="100" height="40">
+          <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+          <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+          <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+          <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+          <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+        </svg></li>
+        <li id="controller-4" onClick="loadSlider(this); return false;"><svg width="100" height="40">
+          <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+          <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+          <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+          <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+          <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+        </svg></li>
+        <li id="controller-5" onClick="loadSlider(this); return false;"><svg width="100" height="40">
+          <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+          <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+          <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+          <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+          <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+        </svg></li>
+        <li id="controller-6" onClick="loadSlider(this); return false;"><svg width="100" height="40">
+          <circle cx="87" cy="27" r="2" stroke="#ffffff" stroke-width="1" fill="#ffffff" id="sliderStartDot"/>
+          <circle cx="87" cy="27" r="12" stroke="#ff6600" stroke-width="1" fill="transparent" id="sliderCenterDot"/>
+          <circle cx="87" cy="27" r="2" stroke="#ff6600" stroke-width="1" fill="#ff6600" id="sliderCenterCircle"/>
+          <path d="M87 27 L0 27" stroke="#ff6600" stroke-width="2" fill="none" stroke-dasharray="5,10,5" id="sliderRuler"/>
+          <text x="3" y="20" style="font-family: 'Meiryo Bold';font-size: 16;stroke: #ff6600;fill: #ff6600;" id="sliderText">Main</text>
+        </svg></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

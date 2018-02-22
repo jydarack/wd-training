@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+$main-color: #000;
+$main-text: #fff;
+
+$important_thumb_size: 60px;
+$oneshot_thumb_size: 160px;
+html, body {
+  margin:0; padding: 0;
+  font-family: "Ubuntu Condensed";
+  color:$main-text;
+}
+
+header{
+  background-color: lighten($main_color, 50%);
+  margin:0;
+  .menu-frame{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+  }
+  height: 50px;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  .menu{
+    text-align:right;
+    ul{
+      list-style: none;
+      li {
+        display: inline-block;
+        margin:0 5px;
+      }
+    }
+  }
+}
+.container{
+  max-width:1200px;
+  padding:0 15px;
+  margin:0 auto;
+}
+
+section#first-view{
+  height:100vh;
+  position:relative;
+  top:0;
+  .fv-bg{
+    background-image: url("https://static.pexels.com/photos/877695/pexels-photo-877695.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+    position:absolute;
+    top:0;left:0;
+  }
+  .fv-main-text{
+    position:absolute;
+    width:40%;
+    height:40%;
+    top:0; left:0;
+    margin: auto;
+    right:0; bottom:0;
+    padding:10%;
+    box-sizing: border-box;
+
+    h2{
+      font-weight: bolder;
+      font-size: 24px;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+section#articles-importants{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.media{
+  background-color: lighten($main-color, 80%);
+  position: relative;
+  height:$important_thumb_size;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  &-text{
+    position: absolute;
+    width:calc(100% - #{$important_thumb_size});
+    height: $important_thumb_size;
+    left:#{$important_thumb_size + 5px};
+    top:3px;
+    box-sizing: border-box;
+    color:$main-color;
+    h3{
+      margin-bottom: 3px;
+    }
+  }
+  img{
+    height: $important_thumb_size;
+    width:$important_thumb_size;
+    object-fit:cover;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+}
+
+
+section#one-shot{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+  .one-shot-tile{
+    position: relative;
+    height: $oneshot_thumb_size;
+    img{
+      position: absolute;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+    .one-shot-title{
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba($main_color, 0.25);
+      padding: 2px 5px;
+      font{
+        -size: 12px;
+        -weight: light;
+      }
+    }
+  }
+}

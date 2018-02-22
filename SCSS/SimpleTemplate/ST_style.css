@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Condensed");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu Condensed";
+  color: #fff; }
+
+header {
+  background-color: gray;
+  margin: 0;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  header .menu-frame {
+    display: grid;
+    grid-template-columns: 200px 1fr; }
+  header .menu {
+    text-align: right; }
+    header .menu ul {
+      list-style: none; }
+      header .menu ul li {
+        display: inline-block;
+        margin: 0 5px; }
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+section#first-view {
+  height: 100vh;
+  position: relative;
+  top: 0; }
+  section#first-view .fv-bg {
+    background-image: url("https://static.pexels.com/photos/877695/pexels-photo-877695.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  section#first-view .fv-main-text {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    padding: 10%;
+    box-sizing: border-box; }
+    section#first-view .fv-main-text h2 {
+      font-weight: bolder;
+      font-size: 24px;
+      margin-bottom: 1em; }
+
+section#articles-importants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; }
+
+.media {
+  background-color: #cccccc;
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .media-text {
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 60px;
+    left: 65px;
+    top: 3px;
+    box-sizing: border-box;
+    color: #000; }
+    .media-text h3 {
+      margin-bottom: 3px; }
+  .media img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+section#one-shot {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px; }
+  section#one-shot .one-shot-tile {
+    position: relative;
+    height: 160px; }
+    section#one-shot .one-shot-tile img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    section#one-shot .one-shot-tile .one-shot-title {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+      padding: 2px 5px; }
+      section#one-shot .one-shot-tile .one-shot-title font {
+        -size: 12px;
+        -weight: light; }
+
+/*# sourceMappingURL=ST_style.css.map */
