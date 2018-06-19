@@ -1,0 +1,36 @@
+.lineup {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+}
+
+.product{
+  width: 15%;
+  flex: 1 auto;
+  /* border: 1px solid red; */
+
+
+}
+.product:after{
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.product:nth-child(odd) {
+  background-color: green;
+}
+.product:nth-child(even) {
+  background-color: aqua;
+}
+
+.e {
+  width: 30%;
+  flex: 1 auto;
+}
+
+.cont {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}

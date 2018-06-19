@@ -1,0 +1,9 @@
+,
+{
+  "@type": "ListItem",
+  "position": 3,
+  "item": {
+    "@id": "<?php echo get_permalink($post->ID); ?>",
+    "name": "<?php echo get_the_title($post->ID) ?>"
+  }
+}

@@ -1,0 +1,28 @@
+.cont {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+}
+
+ul > li {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    /* margin: 5px 5px; */
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left
+}
+
+ul li:nth-child(5) {
+    width: calc( 150px * 2 + 5px);
+    height: calc( 150px * 2 + 5px);
+}

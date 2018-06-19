@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <?php global $post; ?>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "<?php echo get_site_url() ?>",
+            "name": "HOME"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://example.com/dresses/real",
+            "name": "Real Dresses"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "<?php echo get_permalink( $post->ID ); ?>",
+            "name": "Real Dresses"
+          }
+        }
+      ]
+    }
+  </script>
+
+
+COMPANY LIST
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": ["ItemList", "Corporation"],
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Corporation",
+          "name": "If Not For You",
+          "description": "" ,
+          "logo": "test",
+          "url": "test"
+        }
+      }
+    ]
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "headline" : "★記事のヘッドライン。ほとんどの記事はtitleの値と同じと思われる★"
+  "description" : "★記事の概要。descriptionの値でよい★",
+  "genre" : "★カテゴリ名★",
+  "url" : "★canonicalのURL★"
+}
+</script>
+
+
+
+</body>
+
+</html>

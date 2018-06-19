@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form class="" action="mail.php" method="post">
+    <input type="text" name="target_mail" value="" placeholder="メールアドレス">
+    <br><textarea name="content" rows="10" cols="80" id="content"></textarea>
+    <br><span id=counter></span>
+    <br><input type="submit" name="" value="メール送信">
+    <br><input type="button" id="bourrelesurnes" value="字いっぱい！">
+  </form>
+  <script type="text/javascript">
+    document.getElementById('content').onkeyup = function () {
+      document.getElementById('counter').innerHTML = (this.value.length)+"文字";
+    };
+
+
+    document.getElementById('bourrelesurnes').onclick = function () {
+      var con = "";
+      for(i=0; i<220; i++) {
+        con += (Math.random() >= 0.5) ? "012345678" : "J・GRIP株式会社";
+        con += (Math.random() > 0.85)? "\n" : "" ;
+      }
+      document.getElementById('content').value = con;
+      document.getElementById('counter').innerHTML = (document.getElementById('content').value.length)+"文字";
+    };
+  </script>
+</body>
+</html>
