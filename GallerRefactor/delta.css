@@ -1,0 +1,79 @@
+/* .container {
+    background:aqua;
+    width:100%;
+    max-width: 600px;
+    margin: 5px auto;
+    padding:0;
+} */
+
+.new_square {
+    width: 100%;
+    display: inline-flex;
+    margin: 0;
+    position:relative;
+    /* background-image: url("./chocobg.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+/* .new_square:first-of-type{
+    margin-right:1%;
+} */
+
+.new_square::before {
+    content: " ";
+    padding-bottom:100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+.new_square::after {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.3);
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
+
+.new_square .square-content {
+    z-index: 2;
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    border: 3px solid #fff;
+}
+.new_square .post-date, .new_square .post-title {
+    position:absolute;
+    width:100%;
+    margin:5px auto;
+    left:5%;
+    width: 90%;
+}
+.new_square .post-date { 
+    bottom: 0;
+    height: 20%;
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-top: 3px solid #fff;
+    margin: 0 auto;
+}
+
+.new_square .post-title { 
+    top: 0;
+    height: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 12px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+}

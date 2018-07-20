@@ -1,0 +1,22 @@
+.carousel-caption > div {
+  width: 90%;
+  /* position: relative; */
+}
+
+.carousel-caption h3 {
+  position: absolute;
+  top: 5%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+.carousel-caption > div > p {
+  position: absolute;
+  bottom: 5%;
+  height: 20%;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
